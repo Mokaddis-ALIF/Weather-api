@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Temperature Hot</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<style>
+			body {
+				background: url(images/bg-image.jpg) no-repeat;
+				background-size: cover;
+				height: 100vh;
+			}
+		</style>
+	</head>
+
+	<body id="body">
+		<div class="container">
+			<form class="col-md-6 m-auto py-5">
+				<div class="input-group mb-3">
+					<input
+						id="search-field"
+						type="text"
+						class="form-control"
+						placeholder="Enter a location for Weather ..."
+					/>
+					<div class="input-group-append">
+						<button
+							type="button"
+							onclick="searchResult()"
+							id="search-button"
+							class="btn btn-danger"
+						>
+							Search
+						</button>
+					</div>
+				</div>
+			</form>
+			<div class="weather-status text-white font-italic fs-1 text-center">
+				<img src="https://openweathermap.org/img/wn/02d@2x.png" alt="" />
+				<div class="d-flex flex-column">
+					<h1><span id="location">Dhaka,BD</span></h1>
+					<h3>
+						<span id="temp">30.06</span>/<span id="feels">30.06</span>&deg;C
+					</h3>
+					<h3 class="lead"><span id="date"></span></h3>
+					<div class="flex flex-column">
+						<img
+							src="https://openweathermap.org/img/wn/04n.png"
+							alt=""
+							class="icon"
+						/>
+						<div class="description lead"><h4>Cloudy</h4></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
