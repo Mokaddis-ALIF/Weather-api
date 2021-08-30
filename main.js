@@ -2,16 +2,16 @@
 window.addEventListener('load', () => {
 	let long;
 	let lat;
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition((position) => {
-			long = position.coords.longitude;
-			lat = position.coords.latitude;
-			const api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=761da6fb638e9a4416e8e25a80145f17`;
-			fetch(api)
-				.then((response) => response.json())
-				.then((data) => displayResults(data));
-		});
-	}
+	// if (navigator.geolocation) {
+	navigator.geolocation.getCurrentPosition((position) => {
+		long = position.coords.longitude;
+		lat = position.coords.latitude;
+		const api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=761da6fb638e9a4416e8e25a80145f17`;
+		fetch(api)
+			.then((response) => response.json())
+			.then((data) => displayResults(data));
+	});
+	// }
 });
 
 //button load
